@@ -29,6 +29,7 @@ if not errorlevel 0 (
     pause & exit /B 1
 ) else (
     echo Installation FINISHED!
+    pause
 )
 echo Rebooting in 30s...
 shutdown /t 30 /r /f

@@ -26,6 +26,7 @@ if not errorlevel 0 (
 ) else (
     echo Installation FINISHED!
     reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" /v "UpdateFilters" /t REG_SZ /d "C:\Users\Administrator\Desktop\UpdateFilters.bat" /f
+    pause
 )
 echo Rebooting in 30s...
 shutdown /t 30 /r /f
