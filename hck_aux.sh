@@ -258,9 +258,9 @@ LOOPRUN_FILE=${HCK_ROOT}"/.hck_stop_looped_vms_${UNIQUE_ID}.flag"
 loop_run_vm() {
   while true; do
     $*
-    if [ 0 -ne $* ];
+    if [ 0 -ne $? ];
     then
-        echo "Failed to $?"
+        echo "Failed to $*"
         return 1
     fi
     test -f $LOOPRUN_FILE && return 0
