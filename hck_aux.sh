@@ -260,7 +260,7 @@ loop_run_vm() {
     $*
     if [ 0 -ne $* ];
     then
-        echo "Failed to $*"
+        echo "Failed to $?"
         return 1
     fi
     test -f $LOOPRUN_FILE && return 0
